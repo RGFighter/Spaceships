@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Gameplay.Helpers;
+﻿using Gameplay.Helpers;
 using UnityEngine;
 
 public class OutOfBorderDestructor : MonoBehaviour
