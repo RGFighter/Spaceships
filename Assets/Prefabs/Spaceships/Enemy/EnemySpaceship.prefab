@@ -87,6 +87,7 @@ MonoBehaviour:
   _weaponSystem: {fileID: 590599124999967758}
   _battleIdentity: 2
   _hp: 100
+  _score: 1
 --- !u!114 &590599124999967860
 MonoBehaviour:
   m_ObjectHideFlags: 0

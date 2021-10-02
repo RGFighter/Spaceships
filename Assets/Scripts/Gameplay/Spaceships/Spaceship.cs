@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Gameplay.Data;
 using Gameplay.ShipControllers;
 using Gameplay.ShipSystems;
 using Gameplay.Weapons;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Gameplay.Spaceships
 {
-    public class Spaceship : MonoBehaviour, ISpaceship, IDamagable
+    public class Spaceship : MonoBehaviour, ISpaceship, IDamagable, IScoreDealer
     {
         [SerializeField]
         private ShipController _shipController;
@@ -18,10 +18,14 @@ namespace Gameplay.Spaceships
         private UnitBattleIdentity _battleIdentity;
         [SerializeField]
         private float _hp; // Добавлено поле для хранения количества очков прочности корабля.
-        
+        [SerializeField]
+        private int _score; // Добавлено поле для хранения количества очков получаемых за уничтожение корабля.
+
         public MovementSystem MovementSystem => _movementSystem;
         public WeaponSystem WeaponSystem => _weaponSystem;
         public UnitBattleIdentity BattleIdentity => _battleIdentity;
+        public float HP => _hp; // Реализация свойства из интерфейса IDamagable.
+        public int Score => _score; // Реализация свойства из интерфейса IScoreDealer.
 
         private void Start()
         {
@@ -35,6 +39,10 @@ namespace Gameplay.Spaceships
 
             if (_hp <= 0) {
                 Destroy (gameObject);
+
+                if (damageDealer.BattleIdentity == UnitBattleIdentity.Ally) {
+                    Player.ApplyScore (this);
+                }
             }
         }
     }
