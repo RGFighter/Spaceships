@@ -220,7 +220,7 @@ MonoBehaviour:
   _movementSystem: {fileID: 6910651213156479314}
   _weaponSystem: {fileID: 6910651213156479312}
   _battleIdentity: 1
-  _hp: 1000
+  _hp: 3000
   _hpRefreshing: {fileID: 4180074219044444957}
 --- !u!114 &6910651213156479313
 MonoBehaviour:
