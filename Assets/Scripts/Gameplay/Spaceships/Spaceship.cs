@@ -17,7 +17,7 @@ namespace Gameplay.Spaceships
         [SerializeField]
         private UnitBattleIdentity _battleIdentity;
         [SerializeField]
-        private float _hp; // Добавлено поле для хранения количества очков прочности корабля.
+        private protected float _hp; // Добавлено поле для хранения количества очков прочности корабля.
 
         public MovementSystem MovementSystem => _movementSystem;
         public WeaponSystem WeaponSystem => _weaponSystem;

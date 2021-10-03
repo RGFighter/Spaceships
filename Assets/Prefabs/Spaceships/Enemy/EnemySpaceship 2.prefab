@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 590599124999967860}
   - component: {fileID: 590599124999967756}
   - component: {fileID: 590599124999967758}
+  - component: {fileID: 6140452940489685854}
   - component: {fileID: 7280752513643992934}
   - component: {fileID: 5659333393718678246}
   - component: {fileID: 1387087252038566574}
@@ -88,6 +89,7 @@ MonoBehaviour:
   _weaponSystem: {fileID: 590599124999967758}
   _battleIdentity: 2
   _hp: 500
+  _bonusesSystem: {fileID: 6140452940489685854}
   _score: 5
 --- !u!114 &590599124999967860
 MonoBehaviour:
@@ -132,6 +134,21 @@ MonoBehaviour:
   _weapons:
   - {fileID: 4692077203034477166}
   - {fileID: 6793959049732026510}
+--- !u!114 &6140452940489685854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590599124999967857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9427b5e2bdd45498e7beb576e6405c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bonus: {fileID: 4708963887118186733, guid: 03e9d59751a5c2d4fa66ab69c4da94b9, type: 3}
+  _place: {fileID: 590599124999967858}
+  _chance: 15
 --- !u!50 &7280752513643992934
 Rigidbody2D:
   serializedVersion: 4
