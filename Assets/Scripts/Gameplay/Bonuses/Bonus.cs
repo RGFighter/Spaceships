@@ -3,7 +3,7 @@
 namespace Gameplay.Bonuses {
     // Добавлен класс бонуса выпадающего из уничтоженного вражеского корабля (в соответствии с требованиями ТЗ).
     [AddComponentMenu ("Spaceships/Bonuses/Bonus")]
-    public class Bonus : MonoBehaviour, IBonusDealer {
+    public class Bonus : RegistrableGameObject, IBonusDealer {
         [SerializeField]
         private BonusType _bonusType; // Тип.
         [SerializeField]
@@ -17,6 +17,9 @@ namespace Gameplay.Bonuses {
         public float Value => _value;
         public float Duration => _duration;
 
+        private void Start () {
+            Register (); // Регистрация в менеджере.
+        }
         private void Update () {
             Move (_speed);
         }
@@ -25,11 +28,16 @@ namespace Gameplay.Bonuses {
 
             if (bonusReceiver != null) {
                 bonusReceiver.ApplyBonus (this);
+                Unregister (); // Отмена регистрации в менеджере.
                 Destroy (gameObject);
             }
         }
         private protected void Move (float speed) {
             transform.Translate (speed * Time.deltaTime * Vector3.up);
+        }
+        // Начать заново.
+        public override void Restart () {
+            Destroy (gameObject);
         }
     }
 }

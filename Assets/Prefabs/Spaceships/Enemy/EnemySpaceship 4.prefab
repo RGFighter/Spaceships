@@ -118,6 +118,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300040, guid: c5bfed1748bf1294b8f973cff12b3925,
         type: 3}
+    - target: {fileID: 4717915902934144116, guid: 5c4e8f455f2aea046b8a1a71b19a1f91,
+        type: 3}
+      propertyPath: _weapons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717915902934144116, guid: 5c4e8f455f2aea046b8a1a71b19a1f91,
+        type: 3}
+      propertyPath: _weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 6476180609611820711}
+    - target: {fileID: 5659333393718678246, guid: 5c4e8f455f2aea046b8a1a71b19a1f91,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659333393718678246, guid: 5c4e8f455f2aea046b8a1a71b19a1f91,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6853511794782223277, guid: 5c4e8f455f2aea046b8a1a71b19a1f91,
         type: 3}
       propertyPath: _bonus

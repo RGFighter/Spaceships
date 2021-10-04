@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 804650606604722611}
   - component: {fileID: 6910651213156479313}
   - component: {fileID: 6910651213156479314}
-  - component: {fileID: 6910651213156479312}
   - component: {fileID: 2540544495500081184}
   - component: {fileID: 355433542045599540}
   m_Layer: 0
@@ -218,10 +217,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shipController: {fileID: 6910651213156479313}
   _movementSystem: {fileID: 6910651213156479314}
-  _weaponSystem: {fileID: 6910651213156479312}
+  _weaponSystem: {fileID: 2993836659934865283}
   _battleIdentity: 1
   _hp: 3000
   _hpRefreshing: {fileID: 4180074219044444957}
+  _gameOver: {fileID: 0}
 --- !u!114 &6910651213156479313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,21 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lateralMovementSpeed: 50
   _longitudinalMovementSpeed: 0
---- !u!114 &6910651213156479312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6910651213156479279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe6f97e91afe7c44b9413a4b009a0b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weapons:
-  - {fileID: 6910651213495973518}
-  - {fileID: 8983208217998367586}
 --- !u!61 &2540544495500081184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,6 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6910651214060967067}
+  - component: {fileID: 2993836659934865283}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -343,6 +329,21 @@ Transform:
   m_Father: {fileID: 6910651213156479276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2993836659934865283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910651214060967066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe6f97e91afe7c44b9413a4b009a0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapons:
+  - {fileID: 6910651213495973518}
+  - {fileID: 8983208217998367586}
 --- !u!1001 &1269198239871335370
 PrefabInstance:
   m_ObjectHideFlags: 0

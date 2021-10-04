@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 3274570344616576308, guid: 81fdad4d02dece045ac9749849d3319e,
         type: 3}
       propertyPath: m_Name
-      value: Bonus
+      value: HP 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81fdad4d02dece045ac9749849d3319e, type: 3}

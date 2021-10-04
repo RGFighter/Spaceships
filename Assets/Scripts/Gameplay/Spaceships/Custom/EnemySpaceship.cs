@@ -17,6 +17,11 @@ namespace Gameplay.Spaceships.Custom {
         private protected override void DestroySelf () {
             Player.ApplyScore (this);
             _bonusesSystem.TriggerBonus ();
+            Unregister (); // Отмена регистрации в менеджере.
+            Destroy (gameObject);
+        }
+        // Начать заново.
+        public override void Restart () {
             Destroy (gameObject);
         }
     }

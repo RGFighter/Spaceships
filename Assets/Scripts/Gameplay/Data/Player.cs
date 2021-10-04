@@ -11,5 +11,9 @@
         public static void ApplyScore (IScoreDealer scoreDealer) {
             _score += scoreDealer.Score;
         }
+        // Метод сбрасывающий набранные очки.
+        public static void Reset () {
+            _score = 0;
+        }
     }
 }

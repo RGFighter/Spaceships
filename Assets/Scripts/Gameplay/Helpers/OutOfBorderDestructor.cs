@@ -1,4 +1,5 @@
-﻿using Gameplay.Helpers;
+﻿using Gameplay;
+using Gameplay.Helpers;
 using UnityEngine;
 
 public class OutOfBorderDestructor : MonoBehaviour
@@ -16,7 +17,12 @@ public class OutOfBorderDestructor : MonoBehaviour
     {
         if(!GameAreaHelper.IsInGameplayArea(transform, _representation.bounds))
         {
-            Destroy(gameObject);
+            var registrableObject = GetComponent<IRegistrableGameObject> ();
+
+            if (registrableObject != null)
+                registrableObject.Unregister (); // Отмена регистрации в менеджере.
+
+            Destroy (gameObject);
         }
     }
 }

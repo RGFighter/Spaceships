@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Gameplay;
+using UnityEngine;
 
 namespace Gameplay.Weapons.Projectiles
 {
-    public abstract class Projectile : MonoBehaviour, IDamageDealer
+    public abstract class Projectile : RegistrableGameObject, IDamageDealer
     {
         [SerializeField]
         private float _speed;
@@ -13,6 +14,9 @@ namespace Gameplay.Weapons.Projectiles
         public UnitBattleIdentity BattleIdentity => _battleIdentity;
         public float Damage => _damage;
 
+        private void Start () {
+            Register (); // Регистрация в менеджере.
+        }
         public void Init(UnitBattleIdentity battleIdentity)
         {
             _battleIdentity = battleIdentity;
@@ -29,7 +33,13 @@ namespace Gameplay.Weapons.Projectiles
                 && damagableObject.BattleIdentity != BattleIdentity)
             {
                 damagableObject.ApplyDamage(this);
+                Unregister (); // Отмена регистрации в менеджере.
+                Destroy (gameObject);
             }
+        }
+        // Начать заново.
+        public override void Restart () {
+            Destroy (gameObject);
         }
         protected abstract void Move(float speed);
     }

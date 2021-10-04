@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590599124562096581}
+  - component: {fileID: 4717915902934144116}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -30,6 +31,19 @@ Transform:
   m_Father: {fileID: 590599124999967858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4717915902934144116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590599124562096580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe6f97e91afe7c44b9413a4b009a0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapons: []
 --- !u!1 &590599124999967857
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +56,6 @@ GameObject:
   - component: {fileID: 7469634523117451612}
   - component: {fileID: 590599124999967860}
   - component: {fileID: 590599124999967756}
-  - component: {fileID: 590599124999967758}
   - component: {fileID: 6853511794782223277}
   - component: {fileID: 7280752513643992934}
   - component: {fileID: 5659333393718678246}
@@ -84,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shipController: {fileID: 590599124999967860}
   _movementSystem: {fileID: 590599124999967756}
-  _weaponSystem: {fileID: 590599124999967758}
+  _weaponSystem: {fileID: 4717915902934144116}
   _battleIdentity: 2
   _hp: 100
   _bonusesSystem: {fileID: 6853511794782223277}
@@ -117,19 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lateralMovementSpeed: 50
   _longitudinalMovementSpeed: 10
---- !u!114 &590599124999967758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590599124999967857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe6f97e91afe7c44b9413a4b009a0b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weapons: []
 --- !u!114 &6853511794782223277
 MonoBehaviour:
   m_ObjectHideFlags: 0

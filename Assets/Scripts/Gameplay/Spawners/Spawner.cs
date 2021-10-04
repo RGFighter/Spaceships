@@ -6,10 +6,9 @@ namespace Gameplay.Spawners
 {
     public class Spawner : MonoBehaviour
     {
-
         [SerializeField]
         private GameObject _object;
-        
+
         [SerializeField]
         private Transform _parent;
         
